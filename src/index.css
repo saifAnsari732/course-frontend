@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ input:hover::placeholder{
+    margin-left: 20px;
+    position: absolute;
+    top: 0px;
+    color: rgb(0, 0, 0);
+    
+  } 
+  input::placeholder{
+    
+    margin-left: 20px;
+    position: absolute; 
+  } 
+ 
