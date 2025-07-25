@@ -17,9 +17,7 @@ import Updatecourse from "./Admin/Updatecourse";
 import OurCoure from "./Admin/OurCoure";
 function App() {
   const user = localStorage.getItem("user");
-  const admin = localStorage.getItem("admin");
-  console.log(user);
-  console.log(admin);
+  const admin = localStorage.getItem("admin")
 
   return (
     <div>
@@ -54,4 +52,3 @@ function App() {
 
 export default App;
 
-// Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
