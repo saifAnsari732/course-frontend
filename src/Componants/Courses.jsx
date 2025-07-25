@@ -53,7 +53,9 @@ function Courses() {
     try {
       const response = await axios.get(`${BACKEND_URL}/user/logout`, {
         withCredentials: true,
+        
       });
+      console.log("coursesdata",response.data);
       toast.success(response.data.message);
       localStorage.removeItem("user");
       setIsLoggedIn(false);
