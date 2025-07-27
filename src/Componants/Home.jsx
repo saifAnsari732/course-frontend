@@ -150,15 +150,15 @@ const Home = () => {
   </div>
 
   {/* Login/Signup Buttons */}
-  <div> 
+  <div className="absolute top-6 right-6 left-55 flex"> 
     {islogedin ? (
       <button
         onClick={handelLogout}
-        className="bg-transparent px-3 py-1.5 border border-teal-500 max-w[330px] font-bold rounded-3xl shadow-xl  "
+        className="bg-gradient-to-tr from-teal-500 to-teal-600 px-3 py-1.5 border border-teal-500 max-w[330px] font-bold rounded-3xl shadow-xl  "
       >
         Logout
       </button> ):( 
-      <div className="absolute top-6 right-6 left-55 flex ">
+      <div className=" ">
     <Link 
       to={"/login"}
       className="rounded-full bg-teal-600 backdrop-blur-sm hover:bg-white/20 border border-white/30 py-2 px-6 font-medium text-white transition-all duration-300"
