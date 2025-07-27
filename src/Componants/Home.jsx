@@ -12,8 +12,12 @@ import "./images/Style.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import toast from "react-hot-toast";
+import TypewriterCourses from "./TypewriterCourses ";
+import TypewriterHello from "./TypewriterHello ";
 
 const Home = () => {
+
+
   // HOOKS
   const [courses, setCourses] = useState([]);
   const [islogedin, setLogedin] = useState(false);
@@ -95,90 +99,83 @@ const Home = () => {
 
   return (
     <div className=" sm:h-[2000px] lg:h-[1200px] max-h-[1500px]   text-white bg-gradient-to-r from-black to-blue-950   ">
-      <div className=" max-w-[1200px] mx-auto   ">
+      <div className=" max-w-[1200px]   ">
         {/* Header */}
-        <header className=" flex items-center justify-between fixed z-idex-50 w-[80%] bg-transparent">
-          <div className="  flex items-center w-[265px] max-w-[70%]  ">
+        <header className="  flex items-center  z-index-50 w-[80%]   ">
+          <div className="  flex items-center w-[205px] max-w-[60%] justify-center relative ">
             <img
-              className=" absolute   text-orange-400 mr-20 mt- w-[300px] h-[200px] "
+              className="text-orange-400 absolute mt-24  w-[300px] h-[200px] "
               src={img}
               alt=""
             />
             {/* <h1 className="text-3xl font-bold text-orange-400 "></h1> */}
           </div>
-          <div id="login"
-           className="lg:flex-row space-x-4 flex items-center py-4 mt-2   ">
-            {islogedin ? (
-              <button
-                onClick={handelLogout}
-                to={"/Login"}
-                className="bg-transparent px-5 py-1.5 border border-teal-500 max-w[330px] font-bold rounded-3xl shadow-xl  "
-              >
-                Logout
-              </button>
-            ) : (
-              <div id="login" className="gap-2 ">
-                <Link
-                  to={"/Login"}
-                  className="bg-transparent px-6  py-2 border border-zinc-400 max-w[330px] font-bold rounded-full shadow-xl   "
-                   id="lo"
-                >
-                  Login
-                </Link>
-                <Link
-                  to={"/Signup"}
-                  className="bg-transparent m-3 px-5 py-2 border border-zinc-400 max-w-[330px] rounded-3xl font-bold  shadow-xl   "
-                id="snp"
-                >
-                  Signup
-                </Link>
-              </div>
-            )}
-          </div>
+        
         </header>
-        {/* main section */}
-        <section
-          id="s"
-          className=" flex flex-col items-center justify-center h-90"
-        >
-          <div id="text" className="word span font-semibold ml-12">
-            <span className="text-cyan-300">H</span>
-            <span className="text-cyan-300">E</span>
-            <span className="text-cyan-300">L</span>
-            <span className="text-cyan-300">L</span>
-            <span className="text-cyan-300">0</span>
-            <span>C</span>
-            <span>O</span>
-            <span>D</span>
-            <span>E</span>
-            <span>R</span>
+ {/* Main Section with Beautiful Gradient Background */}
+<section
+  id="home"
+  className="flex flex-col items-center justify-center mt-20 py-12 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-gray-900"
+>
+  {/* Animated "HELLO CODER Saif" text with typewriter effect */}
+  <div className="text-4xl md:text-6xl font-bold mb-8 text-center">
+    <TypewriterHello />
+  </div>
 
+  {/* Animated course names */}
+  <div className="text-xl md:text-2xl font-semibold mb-8 h-10 text-cyan-300">
+    <TypewriterCourses />
+  </div>
 
-          </div>
+  {/* Search your course text */}
+  <p className="text-gray-300 text-lg md:text-xl mb-12 animate-pulse">
+    PLZ SEARCH YOUR USEFULL COURSE
+  </p>
   
-            <div className="body  ">
-            <p className="animated-paragraph ">PLZ SEARCH YOUR USEFULL COURSE</p>
-          </div>
-          <p className=" text-gray-400 text-xl font-semibold sm:text-wrap text-center "></p>
-          <br />
-          <div id="exp" className="  flex space-x-4 gap-6  md:flex-row flex-col mb-6 ">
-            <Link 
-              to={"/Courses"}
-              className="sap  max-w[417px] rounded-full cursor-pointer border-2 hover:border-2 border-sky-500 py-2 px-5  font-bold text-white  duration-200 "
-            
-            >
-              Explore Course
-            </Link>
+  {/* Action Buttons */}
+  <div className="flex space-x-4 gap-6 md:flex-row flex-col mb-12">
+    <Link 
+      to={"/Courses"}
+      className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 py-3 px-8 font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300"
+    >
+      Explore Course
+    </Link>
 
-            <Link 
-          
-              to={"https://github.com/saifAnsari732"}
-              className=" max-w[417px] rounded-full border   hover:border-2 border-teal-400 p-2  font-bold text-white  duration-200"
-            >
-              Explore All Code
-            </Link>
-          </div>
-        </section>
+    <Link 
+      to={"https://github.com/saifAnsari732"}
+      className="rounded-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 py-3 px-10 font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300"
+    >
+      Explore All Code
+    </Link>
+  </div>
+
+  {/* Login/Signup Buttons */}
+  <div> 
+    {islogedin ? (
+      <button
+        onClick={handelLogout}
+        className="bg-transparent px-3 py-1.5 border border-teal-500 max-w[330px] font-bold rounded-3xl shadow-xl  "
+      >
+        Logout
+      </button> ):( 
+      <div className="absolute top-6 right-6 left-55 flex ">
+    <Link 
+      to={"/login"}
+      className="rounded-full bg-teal-600 backdrop-blur-sm hover:bg-white/20 border border-white/30 py-2 px-6 font-medium text-white transition-all duration-300"
+    >
+      Login
+    </Link>
+    <Link 
+      to={"/signup"}
+      className="rounded-full bg-cyan-600 hover:bg-cyan-700 py-2 px-6 font-medium text-white transition-all duration-300"
+    >
+      Sign Up
+    </Link>
+   </div>
+      )}
+  </div>
+
+</section>
         <section>
           <Slider {...settings}>
             {courses.map((course, id) => {
@@ -200,8 +197,10 @@ const Home = () => {
                         {course.title}{" "}
                       </h2>
                       <div className="flex justify-center p-5">
-                        <Link 
-                        className=" rounded-3xl  hover:bg-orange-400 py-2 px-4 text-xl">
+                        <Link
+                        to={`/buy/${course._id}`}
+                          className=" rounded-3xl  bg-orange-400 py-2 px-5 text-xl"
+                        >
                           Enroll Now
                         </Link>
                          
