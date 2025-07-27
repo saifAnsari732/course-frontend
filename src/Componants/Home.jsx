@@ -225,8 +225,8 @@ const Home = () => {
             </div>
 
             <div className="footer-section">
-              <h3>Quick Links</h3>
-              <ul>
+              <h3 className=" font-semibold text-3xl">Quick Links</h3>
+              <ul className="text-xl ">
                 <li>
                   <a href="#">Home</a>
                 </li>

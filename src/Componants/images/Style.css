@@ -1,28 +1,9 @@
 
-/* Add to your CSS file */
-.typewriter-text {
-  color: #06b6d4;
-  font-weight: 600;
-}
 
-.cursor {
-  animation: blink 1s infinite;
-  color: #06b6d4;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-/* Smooth gradient transition for the background */
-body {
-  background-attachment: fixed;
-}
 
 /* Add this to your CSS file */
-/* .typewriter-text {
-  color: #06b6d4; 
+.typewriter-text {
+  color: #06b6d4; /* cyan-400 */
 }
 
 .cursor {
@@ -32,7 +13,7 @@ body {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
-} */
+}
 
 .footer {
     /* background-color: #2c3e50; */
@@ -58,13 +39,13 @@ body {
   }
   
   .footer-section h3 {
-    font-size: 18px;
+    font-size: 21px;
     margin-bottom: 15px;
     color: #f1c40f;
   }
   
   .footer-section p, .footer-section ul {
-    font-size: 14px;
+    font-size: 19px;
     line-height: 1.6;
   }
   
@@ -116,6 +97,7 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        background-image: linear-gradient(to right, #304c68, #041b33);
     }
   
     .footer-section {
@@ -237,7 +219,7 @@ body {
 
  #lo:hover{
    box-shadow: 0px 0px  20px rgb(0, 195, 169);
-   /* border: 2px solid rgb(0, 195 , 169); */
+   border: 2px solid rgb(0, 195 , 169);
 
  }
 
