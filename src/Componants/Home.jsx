@@ -21,7 +21,7 @@ const Home = () => {
   // HOOKS
   const [courses, setCourses] = useState([]);
   const [islogedin, setLogedin] = useState(false);
-
+ const [load, setload] = useState(false);
   const handelLogout = async () => {
     try {
       await axios.get(`${BACKEND_URL}/user/logout`, {
@@ -52,6 +52,7 @@ const Home = () => {
           `${BACKEND_URL}/course/courses`
         );
         setCourses(response.data.courses);
+        setload(true)
         // console.log(response.data.courses);
       } catch (error) {
         console.error(error);
@@ -177,7 +178,7 @@ const Home = () => {
 
 </section>
         <section>
-          {courses?( 
+          {load?( 
           <Slider {...settings}>
             {courses.map((course, id) => {
               return (
