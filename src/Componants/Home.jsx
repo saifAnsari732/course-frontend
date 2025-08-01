@@ -177,6 +177,7 @@ const Home = () => {
 
 </section>
         <section>
+          {courses?( 
           <Slider {...settings}>
             {courses.map((course, id) => {
               return (
@@ -212,6 +213,11 @@ const Home = () => {
               );
             })}
           </Slider>
+  ):(
+   <div className="flex item-center junstify-center">
+    Prossesing.....📖🖍️📰     
+      </div>
+  )
         </section>
         <hr />
         <footer className="footer">
