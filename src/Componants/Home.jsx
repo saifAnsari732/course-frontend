@@ -179,41 +179,44 @@ const Home = () => {
 </section>
         <section>
           {load?( 
-          <Slider {...settings}>
-            {courses.map((course, id) => {
-              return (
-                <div
-                  key={id}
-                  className="  z-222 p-4 relative flex m-5  w-92 transition-transform duration-500 transform hover:scale-105 bg-gradient-to-r from-black to-blue-950 rounded-2xl "
-                >
-                  <div className="">
-                    <img
-                      src={course.image.url}
-                      alt=""
-                      className="w-full h-36 object-contain g-slate-800  bg-transparent rounded-3xl bg-cover   "
-                    />
+        <h2 className="text-xl font-bold text-white text-center">
+                    data aa gya
+                     </h2>
+          // <Slider {...settings}>
+          //   {courses.map((course, id) => {
+          //     return (
+          //       <div
+          //         key={id}
+          //         className="  z-222 p-4 relative flex m-5  w-92 transition-transform duration-500 transform hover:scale-105 bg-gradient-to-r from-black to-blue-950 rounded-2xl "
+          //       >
+          //         <div className="">
+          //           <img
+          //             src={course.image.url}
+          //             alt=""
+          //             className="w-full h-36 object-contain g-slate-800  bg-transparent rounded-3xl bg-cover   "
+          //           />
 
-                    <div className="">
-                      <h2 className="text-xl font-bold text-white text-center">
-                        {" "}
-                        {course.title}{" "}
-                      </h2>
-                      <div className="flex justify-center p-5">
-                        <Link
-                        to={`/buy/${course._id}`}
-                          className=" rounded-3xl  bg-orange-400 py-2 px-5 text-xl"
-                        >
-                          Enroll Now
-                        </Link>
+          //           <div className="">
+          //             <h2 className="text-xl font-bold text-white text-center">
+          //               {" "}
+          //               {course.title}{" "}
+          //             </h2>
+          //             <div className="flex justify-center p-5">
+          //               <Link
+          //               to={`/buy/${course._id}`}
+          //                 className=" rounded-3xl  bg-orange-400 py-2 px-5 text-xl"
+          //               >
+          //                 Enroll Now
+          //               </Link>
                          
-                      </div>
-                      {/* <p className="text-center">{course.description}</p> */}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </Slider>
+          //             </div>
+          //             {/* <p className="text-center">{course.description}</p> */}
+          //           </div>
+          //         </div>
+          //       </div>
+          //     );
+          //   })}
+          // </Slider>
   ):(
    <div className="flex item-center junstify-center">
     Prossesing.....📖🖍️📰     
