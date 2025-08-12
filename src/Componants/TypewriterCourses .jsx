@@ -14,7 +14,8 @@ const TypewriterCourses = () => {
     "Cloud Computing",
     "Cyber Security",
     "Blockchain",
-    "UI/UX Design"
+    "UI/UX Design",
+    "Backend developer"
   ];
 
   useEffect(() => {

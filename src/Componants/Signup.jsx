@@ -42,10 +42,10 @@ const navigate=useNavigate()
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-black to-blue-900 bg-gray-100 ">
-      <div className="w-full lg:w-[50%] max-w-[69%] sm:w-[68%] bg-gradient-to-r from-black to-blue-800 p-8 rounded-lg shadow-lg items-center justify-center flex flex-col ">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-700 to-blue-900 bg-gray-100 ">
+      <div className="w-full lg:w-[50%] max-w-[69%] sm:w-[68%] bg-gradient-to-r from-black to-blue-800 p-8 rounded-[30px] shadow-lg items-center justify-center flex flex-col ">
         <h1 className="text-2xl font-bold text-center mb-6  text-gray-400">
-          Sign Up
+         Student SignUp
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4 w-auto h-auto ">
           <div className="items-center justify-center">
@@ -128,7 +128,7 @@ const navigate=useNavigate()
 
           <button
             type="submit"
-            className=" h-[40px] w-[100%]  text-white py-3 rounded-md hover:bg-green-700 text-center duration-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=" h-[40px] w-[100%]  text-black text-lg font-semibold rounded-md bg-green-700 text-center duration-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Sign Up
           </button>

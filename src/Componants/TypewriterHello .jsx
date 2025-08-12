@@ -3,7 +3,7 @@ import  { useState, useEffect } from 'react';
 const TypewriterHello = () => {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
-  const fullText = "HELLO CODER Saif";
+  const fullText = "Morden Website to learn Anything..!";
 
   useEffect(() => {
     if (index < fullText.length) {

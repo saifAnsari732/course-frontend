@@ -14,21 +14,24 @@ import "slick-carousel/slick/slick-theme.css";
 import toast from "react-hot-toast";
 import TypewriterCourses from "./TypewriterCourses ";
 import TypewriterHello from "./TypewriterHello ";
-
+import { CircleLoader } from 'react-spinners';
 const Home = () => {
 
 
   // HOOKS
   const [courses, setCourses] = useState([]);
   const [islogedin, setLogedin] = useState(false);
+  const [corslogedin, setcorsLogedin] = useState(false);
 
   const handelLogout = async () => {
     try {
       await axios.get(`${BACKEND_URL}/user/logout`, {
         withCredentials: true,
       });
-      toast.success("Logout Successfull");
+      toast.success(" user Logout Successfull");
+       setTimeout(() => {
       localStorage.removeItem("user");
+       }, 1200);
       setLogedin(false);
     } catch (error) {
       console.log("logout error: " + error);
@@ -52,6 +55,7 @@ const Home = () => {
           `${BACKEND_URL}/course/courses`
         );
         setCourses(response.data.courses);
+        setcorsLogedin(true)
         // console.log(response.data.courses);
       } catch (error) {
         console.error(error);
@@ -98,13 +102,13 @@ const Home = () => {
   };
 
   return (
-    <div className=" sm:h-[2000px] lg:h-[1200px] max-h-[1500px]   text-white bg-gradient-to-r from-black to-blue-950   ">
-      <div className=" max-w-[1200px]   ">
+    <div className=" sm:h-[2000px]  lg:h-[1200px] max-h-[1500px]   text-white bg-gradient-to-r from-black to-blue-950   ">
+      <div className=" w-full">
         {/* Header */}
         <header className="  flex items-center  z-index-50 w-[80%]   ">
           <div className="  flex items-center w-[205px] max-w-[60%] justify-center relative ">
             <img
-              className="text-orange-400 absolute mt-24  w-[300px] h-[200px] "
+              className="text-orange-400 absolute mt-[80px] w-[300px] h-[200px] "
               src={img}
               alt=""
             />
@@ -115,7 +119,7 @@ const Home = () => {
  {/* Main Section with Beautiful Gradient Background */}
 <section
   id="home"
-  className="flex flex-col items-center justify-center mt-20 py-12 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-gray-900"
+  className="flex flex-col items-center w-full justify-center mt-20 py-12 px-4 bg-gradient-to-br from-black-300 via-purple-900 to-gray-900"
 >
   {/* Animated "HELLO CODER Saif" text with typewriter effect */}
   <div className="text-4xl md:text-6xl font-bold mb-8 text-center">
@@ -150,7 +154,7 @@ const Home = () => {
   </div>
 
   {/* Login/Signup Buttons */}
-  <div className="absolute top-6 right-6 left-55 flex"> 
+  <div className="absolute top-6 right-6  left-55 flex"> 
     {islogedin ? (
       <button
         onClick={handelLogout}
@@ -161,7 +165,7 @@ const Home = () => {
       <div className=" ">
     <Link 
       to={"/login"}
-      className="rounded-full bg-teal-600 backdrop-blur-sm hover:bg-white/20 border border-white/30 py-2 px-6 font-medium text-white transition-all duration-300"
+      className="rounded-full bg-teal-600 backdrop-blur-sm hover:bg-white/20 border border-white/30 py-2 px-7 font-medium text-white transition-all duration-300"
     >
       Login
     </Link>
@@ -177,8 +181,10 @@ const Home = () => {
 
 </section>
         <section>
+          {corslogedin?
           <Slider {...settings}>
-            {courses.map((course, id) => {
+            {
+            courses.map((course, id) => {
               return (
                 <div
                   key={id}
@@ -205,14 +211,23 @@ const Home = () => {
                         </Link>
                          
                       </div>
-                      {/* <p className="text-center">{course.description}</p> */}
                     </div>
                   </div>
                 </div>
               );
-            })}
-          </Slider>
-        </section>
+            })
+            
+            
+           
+            }
+          </Slider>:
+            <div className=" h-[150px] w-full "> 
+             <h1 className="text-white text-lg ml-[180px] mt-[120px]"> Loading...
+               <CircleLoader color="teal" size={50} loading={true} />
+             </h1>
+             </div>
+          }
+          </section> 
         <hr />
         <footer className="footer">
           <div className="footer-container">
@@ -245,9 +260,9 @@ const Home = () => {
             <div className="footer-section">
               <h3>Contact Us</h3>
               <ul>
-                <li>Email: info@example.com</li>
-                <li>Phone: +123 456 7890</li>
-                <li>Address: 123 Main St, City, Country</li>
+                <li>Email: saifansari@mail.com</li>
+                <li>Phone: +91 9905234866</li>
+                <li>Address: 123, Lucknow, Uttar Pradesh</li>
               </ul>
             </div>
 

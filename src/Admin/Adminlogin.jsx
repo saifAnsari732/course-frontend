@@ -33,9 +33,11 @@ const Adminlogin = () => {
       );
      toast.success("login Successfull");
      localStorage.setItem("admin",data.token)
-     console.log(data.token);
+    setTimeout(() => {   
       navigate("/admin/dashboard");
+    }, 1200);
     } catch (error) {
+      toast.error("Admin not found")
       setError(error.response.data.errors);
     }
   };
@@ -48,7 +50,7 @@ const Adminlogin = () => {
       >
         <div
           id="login"
-          className="flex flex-col gap-4 items-center justify-center w-[600px] min-w-60 h-[500px] bg-gradient-to-r from-black to-blue-800  rounded-xl"
+          className="flex flex-col gap-4 items-center justify-center w-[500px] min-w-55 h-[450px] bg-gradient-to-r from-teal-800 to-blue-900  rounded-xl"
         >
           <h1 className="text-2xl font-bold ">Admin Login</h1>
           <label className="mr-40 mt-10">Enter Your Email</label>
@@ -56,15 +58,13 @@ const Adminlogin = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="focus:outline-none focus:ring-2 focus:ring-blue-500 w-[290px] h-[45px] text-black text-xl rounded-xl placeholder:text-black font-semibold"
-            placeholder="Email Address"
             type="text"
           />
-          <label className="mr-44">Enter Password</label>
+          <label className="mr-44 mt-3">Enter Password</label>
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="focus:outline-none focus:ring-2 focus:ring-blue-500 w-[290px] h-[45px] text-black text-xl rounded-xl placeholder:text-black font-semibold "
-            placeholder="Password"
             type="password"
           />
           {
@@ -73,7 +73,7 @@ const Adminlogin = () => {
             )
           
           }
-          <button className="focus:outline-none focus:ring-2 focus:ring-blue-500  rounded-2xl hover:border border-white hover:bg-green-400 w-60  duration-300 font-bold p-2 hover:text-black ">
+          <button className="focus:outline-none focus:ring-2 mt-5 focus:ring-blue-500  rounded-2xl hover:border border-white bg-green-400 w-60  duration-300 font-bold p-2 hover:text-black ">
             Submit
           </button>
         </div>

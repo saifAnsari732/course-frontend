@@ -49,7 +49,7 @@ const Adminsignup = () => {
 
   return (
   <div>  
-      <header className=" flex items-center justify-between fixed z-idex-50 w-[95%] bg-transparent text-white ">
+      {/* <header className=" flex items-center justify-between fixed z-idex-50 w-[95%] bg-transparent text-white ">
           <div className="  flex items-center w-[265px] max-w-[70%]  ">
             <img
               className=" absolute   text-orange-400 mr-20 mt- w-[300px] h-[200px] "
@@ -86,9 +86,9 @@ const Adminsignup = () => {
               </div>
             )}
           </div>
-        </header>
+        </header> */}
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-black to-blue-900 bg-gray-100 ">     
-      <div className="w-full lg:w-[50%] max-w-[69%] sm:w-[68%] bg-gradient-to-r from-black to-blue-800 p-8 rounded-lg shadow-lg items-center justify-center flex flex-col gap-4">
+      <div className="w-full lg:w-[50%] max-w-[69%] sm:w-[68%] bg-gradient-to-r from-green-800 to-blue-900 p-8 rounded-lg shadow-lg items-center justify-center flex flex-col gap-4">
       
         <h1 className="text-2xl font-bold text-center mb-6  text-gray-400">
          Admin SignUp
@@ -97,7 +97,7 @@ const Adminsignup = () => {
           <div className="items-center justify-center">
             <label
               htmlFor="firstName"
-              className="block text-sm font-medium text-gray-400 "
+              className="block text-sm font-medium text-black "
             >
               First Name
             </label>
@@ -115,7 +115,7 @@ const Adminsignup = () => {
           <div>
             <label
               htmlFor="lastName"
-              className="block text-sm font-medium text-gray-400"
+              className="block text-sm font-medium text-black"
             >
               Last Name
             </label>
@@ -133,7 +133,7 @@ const Adminsignup = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-400"
+              className="block text-sm font-medium text-black"
             >
               Email
             </label>
@@ -151,7 +151,7 @@ const Adminsignup = () => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-400"
+              className="block text-sm font-medium text-black"
             >
               Password
             </label>
@@ -171,7 +171,7 @@ const Adminsignup = () => {
 
           <button
             type="submit"
-            className=" h-[40px] w-[100%]  text-white py-3 rounded-md hover:bg-green-700 text-center duration-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=" h-[40px] w-[100%] font-semibold text-black  rounded-md bg-purple-400 text-center duration-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Sign Up
           </button>
