@@ -221,9 +221,9 @@ const Home = () => {
            
             }
           </Slider>:
-            <div className=" h-[150px] w-full "> 
-             <h1 className="text-white text-lg ml-[180px] mt-[120px]"> Loading...
-               <CircleLoader color="teal" size={50} loading={true} />
+            <div className=" h-[200px] w-full flex items-center justify-center"> 
+              <h1 className="text-white text-lg font-semibold"> Loading...
+               <CircleLoader color="teal" size={70} loading={true} />
              </h1>
              </div>
           }
