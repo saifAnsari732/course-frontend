@@ -132,6 +132,9 @@ const navigate=useNavigate()
           >
             Sign Up
           </button>
+          <p 
+          onClick={() => navigate("/admin/signup")}
+          className="text-white text-center font-semibold">Admin SignUp</p>
         </form>
       </div>
     </div>

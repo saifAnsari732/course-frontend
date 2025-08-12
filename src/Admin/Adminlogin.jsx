@@ -35,7 +35,7 @@ const Adminlogin = () => {
      localStorage.setItem("admin",data.token)
     setTimeout(() => {   
       navigate("/admin/dashboard");
-    }, 1200);
+    }, 1400);
     } catch (error) {
       toast.error("Admin not found")
       setError(error.response.data.errors);

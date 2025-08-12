@@ -59,6 +59,7 @@ function Courses() {
       toast.success(response.data.message);
       localStorage.removeItem("user");
       setIsLoggedIn(false);
+      navigator("/login");
     } catch (error) {
       console.log("Error in logging out ", error);
       toast.error(error.response.data.errors || "Error in logging out");
