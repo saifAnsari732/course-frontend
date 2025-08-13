@@ -108,7 +108,7 @@ const Home = () => {
         <header className="  flex items-center  z-index-50 w-[80%]   ">
           <div className="  flex items-center w-[205px] max-w-[60%] justify-center relative ">
             <img
-              className="text-orange-400 absolute mt-[80px] w-[300px] h-[200px] "
+              className="text-orange-400 absolute mt-[80px] w-[300px] h-[200px] mr-3 "
               src={img}
               alt=""
             />
@@ -154,7 +154,7 @@ const Home = () => {
   </div>
 
   {/* Login/Signup Buttons */}
-  <div className="absolute top-6 right-6  left-55 flex"> 
+  <div className="absolute top-6 right-1  left-55 flex"> 
     {islogedin ? (
       <button
         onClick={handelLogout}
